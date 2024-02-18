@@ -666,3 +666,20 @@ h6 {
   font-size: 30px;
   color: #ffffff;
 }
+
+@keyframes move{
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#firstImg
+{
+  animation: move 3s infinite;
+}
