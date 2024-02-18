@@ -589,8 +589,7 @@ h6 {
   width: 100%;
   float: left;
   font-size: 25px;
-  color: var(--couleur-primaire);
-  font-weight: bold;
+  color: black;
   line-height: 100px;
   padding-top: 100px;
 }
@@ -599,10 +598,12 @@ h6 {
   width: 100%;
   float: left;
   font-size: 70px;
-  color: #060303;
   font-weight: bold;
   line-height: 100px;
   padding-top: 0px;
+  background: linear-gradient(to right, var(--couleur-primaire), var(--couleur-secondaire));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .banner_text {
@@ -667,6 +668,7 @@ h6 {
   color: #ffffff;
 }
 
+/* Deplacement vertical de l'image svg */
 @keyframes move{
   0% {
     transform: translateY(0);
@@ -683,3 +685,4 @@ h6 {
 {
   animation: move 3s infinite;
 }
+
