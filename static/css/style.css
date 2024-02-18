@@ -317,7 +317,7 @@ h6 {
     display: none;
   }
 
-  #firstImg
+  #firstImg, #troisieme, #quatrieme
   {
     display: none;
   }
@@ -700,3 +700,59 @@ h6 {
   animation: move 3s infinite;
 }
 
+
+/* Deplacement horizontal de l'image svg */
+@keyframes moveHori{
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(50px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+#troisieme
+{
+  animation: moveHori 3s linear infinite;
+}
+
+.about_taital {
+  width: 100%;
+  float: left;
+  font-size: 40px;
+  color: #383838;
+
+}
+
+.about_text {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  color: #0c0900;
+  margin-left: 0px;
+}
+
+.us_text {
+  background-color: #ececeb;
+  border-radius: 100%;
+  color: #5114b2;
+  padding: 5px 10px;
+}
+
+@keyframes orbit{
+  0%{
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}
+
+#quatrieme{
+  position : absolute;
+  animation: orbit 10s linear infinite;
+}
