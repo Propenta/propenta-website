@@ -300,7 +300,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #fff;
+  color: var(--couleur-secondaire);
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -314,6 +314,11 @@ h6 {
   }
 
   .navbar ul {
+    display: none;
+  }
+
+  #firstImg
+  {
     display: none;
   }
 }
@@ -462,7 +467,6 @@ h6 {
   padding: 0 0 30px 0;
   color: #000;
   font-size: 14px;
-  margin-top: 50vmin;
 }
 
 #footer .footer-top {
@@ -604,6 +608,16 @@ h6 {
   background: linear-gradient(to right, var(--couleur-primaire), var(--couleur-secondaire));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 991px) {
+
+  .banner_taital {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .banner_text {
