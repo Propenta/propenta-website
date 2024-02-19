@@ -499,7 +499,7 @@ h6 {
   color: #000;
 }
 
-#footer .footer-top .social-links a {
+#footer .footer-top .social-links .twitter, .facebook , .instagram, .whatsapp, .linkedin{
   font-size: 18px;
   display: inline-block;
   background: var(--couleur-primaire);
