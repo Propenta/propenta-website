@@ -1,5 +1,5 @@
 :root{
-  --couleur-de-fond : #e9e5e5c5;
+  --couleur-de-fond : #d3d8f831;
   --couleur-primaire : #38B6FF;
   --couleur-secondaire : #FF7F50;
   --couleur-secondaire-hover : #df8565;
@@ -779,6 +779,7 @@ h6 {
   text-align: center;
 }
 
+
 .service_text {
   width: 100%;
   float: left;
@@ -875,4 +876,85 @@ h6 {
 .loop
 {
   animation: recherche 3s linear infinite;
+}
+
+/*--------------------------------------------------------------
+# Recent Blog Posts
+--------------------------------------------------------------*/
+.recent-blog-posts .post-box {
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  transition: 0.3s;
+  height: 100%;
+  overflow: hidden;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-blog-posts .post-box .post-img {
+  overflow: hidden;
+  margin: -30px -30px 15px -30px;
+  position: relative;
+}
+
+.recent-blog-posts .post-box .post-img img {
+  transition: 0.5s;
+}
+
+.recent-blog-posts .post-box .post-date {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(1, 41, 112, 0.6);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.recent-blog-posts .post-box .post-title {
+  font-size: 24px;
+  color: #012970;
+  font-weight: 700;
+  margin-bottom: 18px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.recent-blog-posts .post-box .readmore {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  line-height: 1;
+  transition: 0.3s;
+}
+
+.recent-blog-posts .post-box .readmore i {
+  line-height: 0;
+  margin-left: 4px;
+  font-size: 18px;
+}
+
+.recent-blog-posts .post-box:hover .post-title {
+  color: #4154f1;
+}
+
+.recent-blog-posts .post-box:hover .post-img img {
+  transform: rotate(6deg) scale(1.2);
+}
+
+@keyframes moveOblique{
+  0% {
+    transform: translate(10px, 0) rotate(0deg);
+  }
+  50%{
+    transform: translate(20px, -15px) rotate(0deg);
+  }
+  100%{
+    transform: translate(10px, 0) rotate(0deg);
+  }
+  
+}
+
+.fusee{
+  animation: moveOblique 5s infinite;
 }
