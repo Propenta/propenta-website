@@ -132,8 +132,8 @@ h6 {
 
 #header.header-scrolled {
   top: 0;
-  background: rgba(0, 0, 0, 0.85);
-  border-bottom: 1px solid #37332a;
+  background-color: #E9ECEF;
+  border-bottom: 1px solid #E9ECEF;
 }
 
 #header .logo {
@@ -600,7 +600,7 @@ h6 {
   font-weight: bold;
   line-height: 100px;
   padding-top: 0px;
-  background: linear-gradient(to right, var(--couleur-primaire), var(--couleur-secondaire));
+  background: linear-gradient(to right, blue, var(--couleur-secondaire));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   
@@ -625,7 +625,7 @@ h6 {
 }
 
 .read_bt {
-  width: 170px;
+  width: 100%;
   float: left;
   margin-top: 10px;
   margin-bottom: 15px;
@@ -635,18 +635,15 @@ h6 {
   width: 100%;
   float: left;
   font-size: 16px;
-  color: #ffffff;
   text-align: center;
-  background-color: #070414;
-  border-bottom: 7px solid var(--couleur-secondaire);
-  border-radius: 30px;
   padding: 9px 0px;
+
 }
 
-.read_bt a:hover {
-  background-color: var(--couleur-primaire);
-  border-bottom: 7px solid var(--couleur-secondaire);
+.read_bt a:hover{
+  color: var(--couleur-secondaire-hover);
 }
+
 
 #my_slider .carousel-control-prev:hover,
 #my_slider .carousel-control-next:hover,
@@ -942,7 +939,7 @@ h6 {
   transform: rotate(6deg) scale(1.2);
 }
 
-@keyframes moveOblique{
+/* @keyframes moveOblique{
   0% {
     transform: translate(10px, 0) rotate(0deg);
   }
@@ -953,8 +950,126 @@ h6 {
     transform: translate(10px, 0) rotate(0deg);
   }
   
+} */
+
+@keyframes moveOblique{
+  0% {
+    transform: translate(10px, 0) rotate(-50deg);
+  }
+
+  25%{
+    transform: translate(-20px, -18px) rotate(-140deg);
+  }
+  50%{
+    transform: translate(-180px, -15px) rotate(-140deg);
+  }
+  75%{
+    transform: translate(-180px, 15px) rotate(-290deg);
+  }
+  90%{
+    transform: translate(10px, 10px) rotate(-360deg);
+  }
+  100%{
+    transform: translate(10px, 0) rotate(-410deg);
+  }
 }
 
 .fusee{
-  animation: moveOblique 5s infinite;
+  animation: moveOblique 20s infinite;
+}
+
+
+/* Design Mobile  */
+@media (max-width: 991px) {
+  .banner_section #my_slider{
+    text-align: center;
+    background: url("../img/check1.svg") top center;
+    background-size: cover;
+  }
+
+  .banner_section #my_slider:before {
+    content: "";
+    background: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .banner_section #my_slider h6{
+    color: var(--couleur-secondaire);
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner_taital {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 100px;
+    padding-top: 0px;
+    background: linear-gradient(to right, blue, var(--couleur-secondaire));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .banner_text{
+    width: 100%;
+    text-align: center;
+  }
+
+  .about_taital, .about_text{
+    text-align: center;
+  }
+
+  .about_text
+  {
+    margin-top: 10%;
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .banner_section #my_slider{
+    text-align: center;
+    width: 100%;
+  }
+
+  .banner_section #my_slider h6{
+    color: var(--couleur-secondaire);
+    width: 200%;
+    text-align: center;
+  }
+
+
+  .banner_taital {
+    width: 200%;
+    float: left;
+    font-size: 55px;
+    font-weight: bold;
+    line-height: 100px;
+    padding-top: 0px;
+    background: linear-gradient(to right, blue, var(--couleur-secondaire));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+  }
+
+  .banner_text{
+    width: 200%;
+  }
+
+  .about_taital{
+    width: 160%;
+    margin-left: -10%;
+  }
+
+  .about_text{
+    width: 300%;
+    margin-left: -90%;
+    margin-top: 10%;
+    text-align: center;
+  }
 }
