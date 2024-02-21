@@ -8,7 +8,7 @@
 
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background: var(--couleur-de-fond);
   color: var(--couleur-blanche);
 }
@@ -317,7 +317,7 @@ h6 {
     display: none;
   }
 
-  #firstImg, #troisieme, #quatrieme
+  #firstImg, #troisieme, #quatrieme ,#image-stack, #image-que
   {
     display: none;
   }
@@ -592,6 +592,7 @@ h6 {
   line-height: 100px;
   padding-top: 100px;
 }
+
 
 .banner_taital {
   width: 100%;
@@ -1043,9 +1044,28 @@ h6 {
     text-align: center;
   }
 
+  .banner_section_about #my_slider h6{
+    color: var(--couleur-secondaire);
+    width: 100%;
+    text-align: center;
+  }
+
 
   .banner_taital {
     width: 200%;
+    float: left;
+    font-size: 55px;
+    font-weight: bold;
+    line-height: 100px;
+    padding-top: 0px;
+    background: linear-gradient(to right, blue, var(--couleur-secondaire));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+  }
+
+  .banner_taital_about {
+    width: 100%;
     float: left;
     font-size: 55px;
     font-weight: bold;
@@ -1061,6 +1081,10 @@ h6 {
     width: 200%;
   }
 
+  .banner_text_about{
+    width: 100%;
+  }
+
   .about_taital{
     width: 160%;
     margin-left: -10%;
@@ -1072,4 +1096,268 @@ h6 {
     margin-top: 10%;
     text-align: center;
   }
+}
+
+
+:root {
+  --background-color: #ffffff;
+  --background-color-rgb: 255, 255, 255;
+  --default-color: #212529;
+  --default-color-rgb: 33, 37, 41;
+  --accent-color: #e84545;
+  --accent-color-rgb: 232, 69, 69;
+  --heading-color: #32353a;
+  --heading-color-rgb: 50, 53, 58;
+  --contrast-color: #ffffff;
+  --contrast-color-rgb: 255, 255, 255;
+}
+/* Features Section - Home Page
+------------------------------*/
+.features .features-item {
+  color: rgba(var(--default-color-rgb), 0.8);
+}
+
+.features .features-item+.features-item {
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .features .features-item+.features-item {
+    margin-top: 40px;
+  }
+}
+
+.features .features-item h3 {
+  font-weight: 700;
+  font-size: 86px;
+  font-family: 'Tangerine', cursive;
+}
+
+@keyframes rotation{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.image-stack
+{
+  animation: rotation 100s infinite;
+}
+
+@keyframes questionMove{
+  0% {
+    transform: translate(0px, 10px) rotate(0deg);
+  }
+  50%{
+    transform: translate(30px, -100px) rotate(25deg);
+  }
+  100%{
+    transform: translate(0px, 10px) rotate(0deg);
+  }
+}
+
+.image-que
+{
+  animation: questionMove 10s infinite;
+}
+
+
+.features .features-item .btn-get-started {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 8px 30px 10px 30px;
+  border-radius: 4px;
+}
+
+.features .features-item .btn-get-started:hover {
+  background-color: rgba(var(--accent-color-rgb), 0.9);
+}
+
+.features .features-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features .features-item ul li {
+  padding-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.features .features-item ul li:last-child {
+  padding-bottom: 0;
+}
+
+.features .features-item ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: var(--accent-color);
+}
+
+
+.features .features-item .features-img-bg {
+  position: relative;
+  min-height: 500px;
+}
+
+@media (max-width: 640px) {
+  .features .features-item .features-img-bg {
+    min-height: 300px;
+  }
+}
+
+@keyframes gaucheDroite{
+  0% {
+    transform: translate(0px, 0px) rotate(15deg);
+  }
+
+  50%{
+    transform: translate(0, 0) rotate(-10deg);
+  }
+
+  100%{
+    transform: translate(0px, 0) rotate(15deg);
+  }
+}
+
+#img-idea
+{
+  animation: gaucheDroite 5s infinite;
+}
+
+.features .features-item .image-stack {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.features .features-item .image-stack .stack-back {
+  grid-column: 4/-1;
+  grid-row: 1;
+  width: 100%;
+  z-index: 1;
+}
+
+.features .features-item .image-stack .stack-front {
+  grid-row: 1;
+  grid-column: 1/span 8;
+  margin-top: 20%;
+  width: 100%;
+  z-index: 2;
+}
+
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team {
+  background: #fff;
+  padding: 60px 0;
+}
+
+.team .member {
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  transition: 0.3s;
+}
+
+.team .member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.team .member .member-img:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: url(../img/team-shape.svg) no-repeat center bottom;
+  background-size: contain;
+  z-index: 1;
+}
+
+.team .member .social {
+  position: absolute;
+  right: -100%;
+  top: 30px;
+  opacity: 0;
+  border-radius: 4px;
+  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 2;
+}
+
+.team .member .social a {
+  transition: color 0.3s;
+  color: rgba(1, 41, 112, 0.5);
+  margin: 15px 12px;
+  display: block;
+  line-height: 0;
+  text-align: center;
+}
+
+.team .member .social a:hover {
+  color: rgba(1, 41, 112, 0.8);
+}
+
+.team .member .social i {
+  font-size: 18px;
+}
+
+.team .member .member-info {
+  padding: 10px 15px 20px 15px;
+}
+
+.team .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #012970;
+}
+
+.team .member .member-info span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #aaaaaa;
+}
+
+.team .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  padding-top: 15px;
+  line-height: 26px;
+  color: #5e5e5e;
+}
+
+.team .member:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+.team .member:hover .social {
+  right: 8px;
+  opacity: 1;
+}
+
+.section-header
+{
+  color: black;
+  text-align: center;
+}
+
+.section-header h2
+{
+  font-weight: 700;
+  font-size: 86px;
+  font-family: 'Tangerine', cursive;
+  color: var(--couleur-primaire);
 }
