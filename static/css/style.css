@@ -699,10 +699,10 @@ h6 {
 /* Deplacement horizontal de l'image svg */
 @keyframes moveHori{
   0% {
-    transform: translate(0, 0);
+    transform: translate(0, -0);
   }
   50% {
-    transform: translate(50px, 0);
+    transform: translate(-70px, 0);
   }
   100% {
     transform: translate(0, 0);
@@ -711,7 +711,7 @@ h6 {
 
 #troisieme
 {
-  animation: moveHori 3s linear infinite;
+  animation: moveHori 30s linear infinite;
 }
 
 .about_section
@@ -753,7 +753,7 @@ h6 {
 
 #quatrieme{
   position : absolute;
-  animation: orbit 10s linear infinite;
+  animation: orbit 30s linear infinite;
 }
 
 
