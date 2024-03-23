@@ -1,27 +1,3 @@
-document.getElementById("contactForm").addEventListener("submit", function(event){
-    event.preventDefault();
-
-    let subject = document.getElementById("subject").value;
-    let email = document.getElementById("email").value;
-    let message = document.getElementById("message").value;
-
-    fetch("send_email.php", {
-        method: "POST",
-        headers : {
-            "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body : "subjet=" + encodeURIComponent(nom) + "&email=" + encodeURIComponent(email) + "&message=" + encodeURIComponent(message)
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert(data);
-        document.getElementById("contactFrom").reset();
-    })
-    .catch(error => console.error("Erreur : ",error));
-    
-});
-
-
 function kill_space(){
     if(window.innerWidth <= 768)
     {
